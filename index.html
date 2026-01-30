@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
 
 <style>
 :root {
@@ -178,6 +180,103 @@ footer {
   color: var(--accent);
   font-weight: 600;
 }
+/* Celebración */
+.celebration-box {
+  background: white;
+  padding: 45px 35px;
+  border-radius: 22px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  max-width: 700px;
+}
+
+.celebration-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.celebration-divider {
+  width: 90px;
+  height: 2px;
+  background: var(--accent);
+  margin: 15px auto 30px;
+}
+
+.event {
+  margin-bottom: 28px;
+}
+
+.event h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.event p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.event-time {
+  margin-top: 4px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+.story-box {
+  max-width: 500px;
+}
+
+.story-text {
+  margin-top: 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #555;
+}
+/* Álbum final */
+.album-box {
+  max-width: 100%;
+}
+
+.album-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+}
+
+.album-slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+  margin: 10px auto 25px;
+}
+
+.album-slider img {
+  height: 280px;
+  border-radius: 18px;
+  scroll-snap-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Ocultar scrollbar */
+.album-slider::-webkit-scrollbar {
+  display: none;
+}
+.album-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.album-footer {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.6;
+}
 </style>
 </head>
 
@@ -201,18 +300,31 @@ footer {
 </section>
 
 <section>
-  <div class="reveal">
-    <img src="images/lugar.jpg" class="hero-img" alt="Novios">
+  <div class="reveal story-box">
+    <img src="images/lugar.jpg" class="hero-img" alt="Nuestra historia">
+    <p class="story-text">
+      Todo comenzó con un “sí” cotidiano,<br>
+      y hoy celebramos un amor que crece cada día.
+    </p>
   </div>
 </section>
 
   <section>
- <div class="reveal">
-    <h2>Importante</h2>
-    <p>Codigo de vestimenta: Elegante formal! Pero por favor no usar colores vino, beige o gris.</p>
-    <p>Lluvia de sobres:  su presencia es el regalo más valioso en nuestro día especial, 
-      pero si gustan darnos un cariñito agradecemos sea en efectivo!</p>
-    <img src="images/novios.jpg" class="hero-img" alt="Novios">
+  <div class="reveal important-box">
+    <h2 class="important-title">Importante</h2>
+    <div class="important-divider"></div>
+
+    <p class="important-text">
+      <strong>Código de vestimenta:</strong><br>
+      Elegante formal ✨<br>
+      (Por favor no usar colores vino, beige o gris)
+    </p>
+
+    <p class="important-text">
+      <strong>Lluvia de sobres:</strong><br>
+      Su presencia es el regalo más valioso en nuestro día especial,
+      pero si desean hacernos un cariñito, agradecemos sea en efectivo 💌
+    </p>
   </div>
 </section>
 
@@ -229,10 +341,22 @@ footer {
 </section>
 
 <section>
-  <div class="reveal">
-    <h2>La Celebración</h2>
-    <p>Ceremonia: Parroquia San José de la montaña<br>2:00 PM</p>
-    <p>Fiesta: Salón multiusos San José de la montaña<br>4:00 PM</p>
+  <div class="reveal celebration-box">
+    <h2 class="celebration-title">La Celebración</h2>
+    <div class="celebration-divider"></div>
+
+    <div class="event">
+      <h3>Ceremonia</h3>
+      <p>Parroquia San José de la montaña</p>
+      <div class="event-time">2:00 PM</div>
+    </div>
+
+    <div class="event">
+      <h3>Fiesta</h3>
+      <p>Salón multiusos San José de la montaña</p>
+      <div class="event-time">4:00 PM</div>
+    </div>
+
     <a href="https://maps.app.goo.gl/Ro9QHCggpEywDapT9" target="_blank">
       <button class="btn">Ver ubicación</button>
     </a>
@@ -257,9 +381,24 @@ footer {
 </section>
 
 <section>
-  <footer class="reveal">
-    Con cariño 💕<br>Keylor & Diana
-  </footer>
+  <div class="reveal album-box">
+
+    <h2 class="album-title">Momentos</h2>
+    <div class="important-divider"></div>
+
+    <div class="album-slider">
+      <img src="images/album1.jpg" alt="Momento 1">
+      <img src="images/album2.jpg" alt="Momento 2">
+      <img src="images/album3.jpg" alt="Momento 3">
+      <img src="images/album4.jpg" alt="Momento 4">
+    </div>
+
+    <p class="album-footer">
+      Con cariño 💕<br>
+      Keylor & Diana
+    </p>
+
+  </div>
 </section>
 
 <script>
