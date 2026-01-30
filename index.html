@@ -250,9 +250,14 @@ footer {
   display: flex;
   gap: 16px;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  padding: 20px 0;
+  padding: 20px 16px;
   margin: 10px auto 25px;
+
+  /* KEY FIX */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .album-slider img {
@@ -260,6 +265,10 @@ footer {
   border-radius: 18px;
   scroll-snap-align: center;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.album-slider img {
+  max-height: 280px;
+  max-width: 85vw;
 }
 
 /* Ocultar scrollbar */
@@ -276,6 +285,26 @@ footer {
   font-size: 1.4rem;
   color: #555;
   line-height: 1.6;
+}
+@media (max-width: 480px) {
+  .countdown {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .box {
+    min-width: 120px;
+    padding: 14px 16px;
+  }
+
+  .box span {
+    font-size: 1.6rem;
+  }
+
+  .box small {
+    font-size: 0.65rem;
+  }
 }
 </style>
 </head>
