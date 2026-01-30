@@ -397,26 +397,31 @@ footer {
     <h2>Confirma tu asistencia</h2>
 
     <!-- CONECTAR A GOOGLE FORMS -->
-    <form
-  action="https://docs.google.com/forms/d/e/1FAIpQLSf6oSM7AB3engyCf5Bs_oLgeknwTfNA3QMJrBzaPJvkPYWvjw/formResponse"
-  method="POST"
-  target="hidden_iframe"
->
-  <input
-    name="entry.1612719359"
-    placeholder="Nombre completo"
-    required
+    <div id="rsvp-container">
+  <form
+    id="rsvp-form"
+    action="https://docs.google.com/forms/d/e/1FAIpQLSf6oSM7AB3engyCf5Bs_oLgeknwTfNA3QMJrBzaPJvkPYWvjw/formResponse"
+    method="POST"
+    target="hidden_iframe"
   >
+    <input
+      name="entry.1612719359"
+      placeholder="Nombre completo"
+      required
+    >
 
-  <select name="entry.1498081170" required>
-    <option value="">¿Asistirás?</option>
-    <option value="Sí, con gusto">Sí, con gusto</option>
-    <option value="No podré asistir">No podré asistir</option>
-  </select>
+    <select name="entry.1498081170" required>
+      <option value="">¿Asistirás?</option>
+      <option value="Sí, con gusto">Sí, con gusto</option>
+      <option value="No podré asistir">No podré asistir</option>
+    </select>
 
-  <button class="btn" type="submit">Enviar RSVP</button>
-</form>
+    <button class="btn" type="submit">Enviar RSVP</button>
+  </form>
+</div>
+
 <iframe name="hidden_iframe" style="display:none;"></iframe>
+
   </div>
 </section>
 
